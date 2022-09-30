@@ -1,2 +1,2 @@
 1. Food: put in a list of items/ingredients that you already have in your home and upload it. Using that we'll match that with recipes and it will give back the user recipes/meals that they can create with what they already have. (spoonacular API). We can give the user the recipe and the ingredients they dont have and where they can get it.
-2. Yelp + Uber/Lyft : search a place you want to go and then link to Uber/lyft to see which app provides cheaper service. If it's better for walk/bicycle (less time), return how long and how to get there.
+2. Yelp + Uber/Lyft + Map : search a place you want to go and then link to Uber/lyft to see which app provides cheaper service. If it's better for walk/bicycle (less time), return how long and how to get there.
