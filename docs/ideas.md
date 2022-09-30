@@ -1,0 +1,1 @@
+1. Food: put in a list of items/ingredients that you already have in your home and upload it. Using that we'll match that with recipes and it will give back the user recipes/meals that they can create with what they already have.
