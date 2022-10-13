@@ -1,9 +1,3 @@
 1. Food: put in a list of items/ingredients on random facts API (https://fungenerators.com/api/facts/?ref=apilist.fun) that you already have in your home and upload it. Using that we'll match that with recipes and it will give back the user recipes/meals that they can create with what they already have. (spoonacular API). We can give the user the recipe and the ingredients they dont have and where they can get it.
 
-2. Find safest hotels to stay in based on crime statistics of the area. Using the FBI API (api.usa.gov/crime/fbi/sapi/) and YourMapper2 API to find the safest hotels to stay at in a given location and suggest those hotels to the user.
-
-
-
-3. Yelp + Uber/Lyft: search a place you want to go and then link to Uber/lyft to see which app provides cheaper service. If it's better for walk/bicycle (less time), return how long and how to get there.
-4. Cheapest delivery: find the cheapest delivery of restaurants (compare the total cost of tax, delivery fees, service fees maybe after sales across different delivery apps) - variation of finding the cheapest flights. (easy global weather API: price fluctuates with weather)
-5. Movie recommondation: enable users to keep track of movies/series that they like/want to see and recommend based on that. 
+2. Find safest hotels to stay in based on crime statistics of the area. Using the FBI API (api.usa.gov/crime/fbi/sapi/) and YourMapper2 API to find the safest hotels to stay at in a given location and suggest those hotels to the user. "Safest" can be described as in an area with less crime or an area that is historically inactive on police reports. The goal here is to provide users with a trustworthy resource to find a safe place to stay while on a quick business trip for example. Other exmaples include vacations, work travel, emergency trips etc.
