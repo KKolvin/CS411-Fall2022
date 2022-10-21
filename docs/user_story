@@ -1,1 +1,2 @@
 1. As a login user, I want to search a recipe for the ingredients I have.
+2. As a login user, the app should return a list of recipes that match my inputs and ranking them from the closest one.
