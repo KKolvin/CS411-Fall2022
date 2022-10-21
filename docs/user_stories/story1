@@ -1,1 +1,6 @@
-
+As a login user, I want to search a recipe for the ingredients I have.
+the app should return a list of recipes that match my inputs and ranking them from the closest one.
+if I choose a specific recipt, I want the app to list each step on the page.
+I want to see a fun fact about ingredients that step uses next to each step.
+I want the app to make a browsering history of the recipe I have opened before and used before.
+I want the app the have a button that record whether this recipe I used or not. 
