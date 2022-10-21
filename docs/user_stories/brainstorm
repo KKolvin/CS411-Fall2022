@@ -1,2 +1,4 @@
 1. As a login user, I want to search a recipe for the ingredients I have.
 2. As a login user, the app should return a list of recipes that match my inputs and ranking them from the closest one.
+3. As a login user, if I choose a specific recipt, I want the app to list each step on the page.
+4. As a login user, I want to see a fun fact about ingredients that step uses next to each step.
