@@ -1,7 +1,7 @@
-
 User story 3: Variation of Recipes
 
 As a login user, I want to be able to put in my ingredients and get back a list of ranked recipes in descending matched order. 
+I also want an option to exclude recipes with ingredients that I don’t want for this search.
 This gives me different versions of the same recipe that I can use interchangeably. 
 For example, one version of the recipe might suggest using different measuring sizes compared to another. 
 I want to be able to browse these options to select the option that seems most appealing to me. 
