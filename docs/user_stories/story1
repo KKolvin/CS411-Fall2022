@@ -1,6 +1,9 @@
-As a login user, I want to search a recipe for the ingredients I have.
-the app should return a list of recipes that match my inputs and ranking them from the closest one.
-if I choose a specific recipt, I want the app to list each step on the page.
-I want to see a fun fact about ingredients that step uses next to each step.
-I want the app to make a browsering history of the recipe I have opened before and used before.
-I want the app the have a button that record whether this recipe I used or not. 
+User Story1: Account Management
+
+As a user, I want to see that there are options for me to register and login by either email and password
+  or third party authentication with Google, Facebook, Twitter, or Apple.
+I will be asked to provide a primary email address to link to the account if I didn’t provide this information,
+  then I can opt in for 2 step verification with the email. 
+When I register, I will also provide my answer to a question that I select from the questions being provided. 
+After that, I can enable another 2 step verification by answering this question per login in the future. 
+If I forget my password, I will be able to receive an email to retrieve my password.
