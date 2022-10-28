@@ -1,8 +1,7 @@
 User story 2: Check Nutrition/Fun Facts
+
   As a login user, I want to know if my input ingredients produce a balanced meal in terms of nutrition. 
   I want to see the nutrition facts and fun facts of the recipe I am making.
   For the fun facts of the recipe, I don’t want them to show immediately because I want a button to click to see them revealed if I choose to. 
   In that case, I can choose whether or not I want to know the facts of the recipe. 
   Other than the recipe, I would also like to know fun facts about the food that I am about to make because sometimes appetite is also determined by various factors.
-
-
