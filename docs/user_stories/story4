@@ -1,6 +1,6 @@
+User story 4: Personalized Record: Allergy
+
 As a login user, before inputting ingredients, I want the app to record things that may cause allergies. 
 If I don’t have a particular allergy, I can skip this part. 
 If I remember I have an allergy to some ingredients later, I hope that I can update my allergy list later. 
-Then after inputting the ingredients, I want an option for filtering the receipts with the ingredients or seasoning I don’t eat. 
-(may just don’t want to eat for today, no need for record)
-
+Thus, everytime time I look at a recipe that contains ingredients I'm allergic to, there will be a warning showing up for me. 
