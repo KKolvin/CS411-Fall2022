@@ -1,8 +1,6 @@
 User Story 1: Account Management
-  As a user, I want to see that there are options for me to register and login by either email and password
-  or third party authentication with Google, Facebook, Twitter, or Apple.
-  I will be asked to provide a primary email address to link to the account if I didn’t provide this information,
-  then I can opt in for 2 step verification with the email. 
-  When I register, I will also provide my answer to a question that I select from the questions being provided. 
-  After that, I can enable another 2 step verification by answering this question per login in the future. 
+  As a user, I want to login by either email and password or third party authentication with Google, Facebook, Twitter, or Apple.
+  I will be asked to provide a primary email address to link to the account if I didn’t provide this information.
+  When I register, I will also provide my answer to a question that I select from the security questions being provided. 
+  After that, I can enable 2 step verification by either email or answering to my security question per login in the future. 
   If I forget my password, I will be able to receive an email to retrieve my password.
