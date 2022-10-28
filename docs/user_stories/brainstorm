@@ -1,5 +1,0 @@
-1. As a login user, I want to search a recipe for the ingredients I have. I want the app toreturn a list of recipes that match my inputs and ranking them from the closest one. If my ingredients don't match any recipes, then I want the app to return a potential match along with the missing ingredients needed.
-2. I want to see a fun fact about ingredients that step uses next to each step.
-3. As a login user, if I choose to click on a recipe, I want the ingredients and steps to be listed on the page.
-4. Allergies
-5. As a login user, if I like a recipe, I would like to be able to save it for later use. I would like to have a "saved"/"favorited" page with my favorite recipes that I can access any other time.
