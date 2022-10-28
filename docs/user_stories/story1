@@ -1,4 +1,5 @@
 User Story 1: Account Management
+
   As a user, I want to login by either email and password or third party authentication with Google, Facebook, Twitter, or Apple.
   I will be asked to provide a primary email address to link to the account if I didn’t provide this information.
   When I register, I will also provide my answer to a question that I select from the security questions being provided. 
