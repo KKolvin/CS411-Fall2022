@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Convenient Recipes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'><link rel="stylesheet" href="./carousel.css">
+  		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/carousel.css') }}" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 style="margin-top: -2vw;"><a href=".">Convenient Recipes</a></h1>
+							<p>A website to easily navigate any recipes you want</p>
+							<form style="margin-top: 4vw;" class="search-container"  action="/recipes">
+								<input name="ingridients" aria-label="Ingridients" aria-describedby="button-addon2" id="search-bar" placeholder="Seperate your ingredients by commas">
+								<button style="margin-top: 2vw" type="submit">Search</button>
+							</form>
+							<p style="color:rgb(162, 128, 128); font-variant: initial; margin-top: 3vw;">Want some suggestions? Try clicking the Search button directly.</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="home.html">Home</a></li>
+								<li><a href="left.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="carousel.html">No Sidebar</a></li>
+								<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">Magna veroeros</a></li>
+										<li><a href="#">Etiam nisl</a></li>
+										<li>
+											<a href="#">Sed consequat</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Amet consequat</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Sed feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Nisl tempus</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title">Hightlights</div>
+					<div class="container">
+						<p class="style1">In case you are interested in homemade dishes...</p>
+						<p class="style2">
+							See some top-liked recipes created by our users.
+						</p>
+						<!-- <p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
+						free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
+						your personal or commercial projects &ndash; just be sure to credit us!</p> -->
+
+					</div>
+
+					<div class="container-fluid">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						  <div class="carousel-inner row w-100 mx-auto">
+							<div class="carousel-item col-md-4 active">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/1/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 1</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/2/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 2</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/3/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 3</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/4/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 4</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/5/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 5</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/6/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 6</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+							<div class="carousel-item col-md-4">
+							  <div class="card">
+								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/7/800/600" alt="Card image cap">
+								<div class="card-body">
+								  <h4 class="card-title">Card 7</h4>
+								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</div>
+					  </div>
+
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Contact Us</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+							</div>
+							<div class="col-12 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">CS411@bu.edu</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(000) 000-0000
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<p>
+														Boston University<br />
+														750 Commonwealth AVe<br />
+														Boston, MA 02215
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Social</h3>
+													<p>
+														<a href="#">@untitled-corp</a><br />
+														<a href="#">linkedin.com/untitled</a><br />
+														<a href="#">facebook.com/untitled</a>
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>&copy; BU CS411.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='js/main.js')}}"></script>
+			<script src="{{url_for('static', filename='js/try.js')}}"></script>
+
+			<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+			<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+			<script src="{{ url_for('static',filename='js/carousel.js') }}"></script>
+			
+	</body>
+</html>
