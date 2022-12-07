@@ -112,16 +112,7 @@ const NavBar = () => {
             </Nav>
             {!isAuthenticated && (
               <Nav className="d-md-none" navbar>
-                <NavItem>
-                  <Button
-                    id="qsLoginBtn"
-                    color="primary"
-                    block
-                    onClick={() => loginWithRedirect({})}
-                  >
-                    Log in
-                  </Button>
-                </NavItem>
+                
               </Nav>
             )}
             {isAuthenticated && (
