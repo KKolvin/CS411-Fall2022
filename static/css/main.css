@@ -1865,12 +1865,12 @@ input, select, textarea {
 		top: 0.75em;
 	}
 
-		.feature-list section {
+		/* .feature-list section {
 			border-top: solid 1px #eee;
 			padding-top: 3em;
 			padding-left: 5em;
 			position: relative;
-		}
+		} */
 
 		@media screen and (min-width: 981px) {
 
@@ -2093,7 +2093,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../images/banner.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2109,7 +2109,7 @@ input, select, textarea {
 		}
 
 		.homepage #header {
-			height: 35em;
+			height: 45em;
 		}
 
 /* Logo */
@@ -2258,11 +2258,11 @@ input, select, textarea {
 			color: #fff;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-			font-size: 2.75em;
+			font-size: 2em;
 			letter-spacing: 0.075em;
 			line-height: 1.35em;
-			padding: 1em 0 1em 0;
-			margin-bottom: 1em;
+			padding: 0.3em;
+			margin-bottom: 2em;
 		}
 
 			#intro p.style2 a {
@@ -2493,7 +2493,7 @@ input, select, textarea {
 				}
 
 				#intro p.style2 {
-					font-size: 2.25em;
+					font-size: 2em;
 				}
 
 		/* Footer */
@@ -2540,7 +2540,7 @@ input, select, textarea {
 		/* Feature List */
 
 			.feature-list {
-				max-width: 40em;
+				max-width: 30em;
 			}
 
 				.feature-list section {
@@ -2909,7 +2909,7 @@ input, select, textarea {
 			}
 
 				.homepage #header {
-					height: 20em;
+					height: 45em;
 				}
 
 		/* Logo */
@@ -2947,7 +2947,7 @@ input, select, textarea {
 				}
 
 				#intro p.style2 {
-					font-size: 1.5em;
+					font-size: 1em;
 					letter-spacing: 0.05em;
 					line-height: 1.25em;
 					padding: 1.25em;
