@@ -1,0 +1,201 @@
+<head>
+    <title>Recipe Search Results</title>
+    <title>Convenient Recipes</title>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'><link rel="stylesheet" href="./carousel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> 
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/recipe.css') }}" />
+</head>
+
+<body>{% extends 'base.html' %}
+{% block title %} Recipes searcher {% endblock %}
+{% block body %}
+<div id="page-wrapper">
+
+    <!-- Header -->
+        <section id="header" class="wrapper">
+        
+
+            <!-- Logo -->
+                <div id="logo">
+                    <h1>Recipe Search Results</h1>
+                    <p><a href="/">Click here to return to home page</a></p>
+                </div>
+
+            <!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="/">Home</a></li>
+						<li><a href="/favorites">Favorites</a></li>
+						<li><a href="right-sidebar.html">Right Sidebar</a></li>
+						<li><a href="no-sidebar.html">No Sidebar</a></li>
+						<li>								
+                            <a href="#">Dropdown</a>
+							<!--ul>
+							    <li><a href="#">Lorem ipsum</a></li>
+								<li><a href="#">Magna veroeros</a></li>
+								<li><a href="#">Etiam nisl</a></li>
+								<li>
+									<a href="#">Sed consequat</a>
+									<ul>
+										<li><a href="#">Lorem dolor</a></li>
+										<li><a href="#">Amet consequat</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam nisl</a></li>
+										<li><a href="#">Sed feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Nisl tempus</a></li>
+							</ul!-->
+						</li>
+					</ul>
+				</nav>
+
+        </section>
+
+    
+
+    
+<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/favorite.js"></script>
+
+
+
+
+
+<h2 style="text-align: left"> <a href="/" style="text-decoration: none; color:gray"> Recipes for you: </a></h2>
+<div style="margin-left:25%;">
+    <ul class="list-unstyled">
+        {% for recipe in recipes %}
+            <li class="media">
+                <img src="{{recipe['image']}}" class="align-self-center mr-3" alt="..." width="25%" height="25%">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1"><a href="/recipe?id={{ recipe['id'] }}">{{ recipe['title'] }}</a></h5>
+                    {% if 'likes' not in recipe%}
+                        {% for ingredient in recipe['usedIngredients'] %}
+                            <a href="/" style="text-decoration: none; color:gray">Recipe calls for:</a> {{ingredient['original']}} <br>
+                        {% endfor %}
+                        <a href="/" style="text-decoration: none; color:gray">How many minutes for preparation? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['preparationMinutes'],0['original']}}</a> <br>
+                        <a href="/" style="text-decoration: none; color:gray">How many minutes for cooking?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['cookingMinutes']}} </a> <br>
+                        <a href="/" style="text-decoration: none; color:gray">How many likes has this recipe? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['aggregateLikes']}} </a> <br>
+                        <form method="post" action="/">
+                            <input type="submit" value="Add to Favorites" name="action1"/>
+                        </form>
+                    {% else %}
+                        {% for ingredient in recipe['usedIngredients'] %}
+                            <a href="/" style="text-decoration: none; color:gray">Recipe calls for:</a> {{ingredient['original']}} <br>
+                        {% endfor %}
+                        <a href="/" style="text-decoration: none; color:gray">How many your ingredients? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['usedIngredientCount']}} </a><br>
+                        <a href="/" style="text-decoration: none; color:gray">How many missed ingredients?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['missedIngredientCount']}} </a> <br>
+                        {% for ingredient in recipe['missedIngredients'] %}
+                            <a href="/" style="text-decoration: none; color:gray">Missed ingredients:</a> {{ingredient['original']}} <br>
+                        {% endfor %}
+                        <a href="/" style="text-decoration: none; color:gray">How many likes has this recipe?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['likes']}} </a> <br>
+                        <form method="post" action="/favorites">
+                            <input type="submit" value="Add to Favorites" href="/favorites" name="action1"/>
+                        </form>
+                        <!--a href="javascript:addfav()">Add To Favorites</a!-->
+                    {% endif %}
+                </div>
+            </li> <br>
+        {% endfor %}
+    </ul>
+</div >
+
+<!-- Main -->
+        <div id="main" class="wrapper style2">
+            <div class="title">End of the Results</div>
+            <div class="container">
+
+                <!-- Content -->
+                    <div id="content">
+                        <article class="box post">
+                            <header class="style1">
+                                <h2>Enjoy your meal and have a nice day<br class="mobile-hide" />
+                                </h2>
+                                <p>Like our recipe? Share it with your friends!</p>
+                            </header>
+                            <!--a href="#" class="image featured">
+                                <img src="images/pic01.jpg" alt="" />
+                            </a!-->
+                            
+                        </article>
+                    </div>
+
+            </div>
+        </div>
+
+ 
+
+<!-- Footer -->
+<section id="footer" class="wrapper">
+					<div class="title">Contact Us</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+							</div>
+							<div class="col-12 col-12-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="#">CS411@bu.edu</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(000) 000-0000
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Mailing Address</h3>
+													<p>
+														Boston University<br />
+														750 Commonwealth AVe<br />
+														Boston, MA 02215
+													</p>
+												</section>
+											</div>
+											<div class="col-3 col-12-small">
+												<section>
+													<h3 class="icon solid fa-comment">Social</h3>
+													<p>
+														<a href="#">@untitled-corp</a><br />
+														<a href="#">linkedin.com/untitled</a><br />
+														<a href="#">facebook.com/untitled</a>
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>&copy; BU CS411.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+
+</div>
+
+{% endblock %}
+</body>
