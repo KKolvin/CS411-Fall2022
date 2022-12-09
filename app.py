@@ -31,7 +31,7 @@ def new_page_function():
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/"
 
 headers = {
-	"X-RapidAPI-Key": "hidden",
+	"X-RapidAPI-Key": "07f5ddb891msh21c512d703b7bd5p1cb69cjsnc2ae67f8953b",
 	"X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
@@ -41,11 +41,12 @@ randomFind = "recipes/random"
 
 @app.route('/recipes')
 def get_recipes():
-	if (str(request.args['ingridients']).strip() != ""):
+	search_content = str(request.args['ingridients'])
+	if (search_content.strip() != ""):
 		# If there is a list of ingridients -> list
 		querystring = {"number":5,"ranking":"1","ignorePantry":"false","ingredients":request.args['ingridients']}
 		response = requests.request("GET", url + find, headers=headers, params=querystring).json()
-		return render_template('recipes.html', recipes=response)
+		return render_template('recipes.html', recipes=response, ingredients = search_content)
 	else:
 		# Random recipes
 		querystring = {"number":"5"}
@@ -54,15 +55,21 @@ def get_recipes():
 		return render_template('recipes.html', recipes=response['recipes'])
 
 
-
-
 #default page
 @app.route("/", methods=['GET'])
 def home():
 	return render_template('home.html')
 
 @app.route("/left.html", methods=['GET'])
-def new_page_function():
+def left_page():
+	return render_template('left.html')
+
+@app.route("/right-sidebar.html", methods=['GET'])
+def right_page():
+	return render_template('left.html')
+
+@app.route("/no-sidebar.html", methods=['GET'])
+def no_page():
 	return render_template('left.html')
 
 if __name__ == "__main__":
