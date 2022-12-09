@@ -17,7 +17,6 @@ import requests, json, unicodedata
 import os, base64
 
 app = Flask(__name__)
-app.secret_key = 'super secret string'  # Change this!
 
 
 '''
@@ -31,7 +30,7 @@ def new_page_function():
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/"
 
 headers = {
-	"X-RapidAPI-Key": "07f5ddb891msh21c512d703b7bd5p1cb69cjsnc2ae67f8953b",
+	"X-RapidAPI-Key": "hidden",
 	"X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
