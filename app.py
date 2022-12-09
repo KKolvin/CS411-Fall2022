@@ -20,7 +20,7 @@ import os, base64
 
 mysql = MySQL()
 app = Flask(__name__)
-app.secret_key = "07f5ddb891msh21c512d703b7bd5p1cb69cjsnc2ae67f8953b"  # Change this!
+app.secret_key = "hidden"  # Change this!
 
 
 #new login
