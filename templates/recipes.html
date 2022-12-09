@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'><link rel="stylesheet" href="./carousel.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> 
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
-    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/recipes.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/recipe.css') }}" />
 </head>
 
 <body>{% extends 'base.html' %}
@@ -16,6 +16,7 @@
     <!-- Header -->
         <section id="header" class="wrapper">
         
+
             <!-- Logo -->
                 <div id="logo">
                     <h1>Recipe Search Results</h1>
@@ -26,12 +27,12 @@
 				<nav id="nav">
 					<ul>
 						<li class="current"><a href="/">Home</a></li>
-						<li><a href="left.html">Left Sidebar</a></li>
+						<li><a href="/favorites">Favorites</a></li>
 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
 						<li><a href="no-sidebar.html">No Sidebar</a></li>
 						<li>								
                             <a href="#">Dropdown</a>
-							<ul>
+							<!--ul>
 							    <li><a href="#">Lorem ipsum</a></li>
 								<li><a href="#">Magna veroeros</a></li>
 								<li><a href="#">Etiam nisl</a></li>
@@ -46,17 +47,31 @@
 									</ul>
 								</li>
 								<li><a href="#">Nisl tempus</a></li>
-							</ul>
+							</ul!-->
 						</li>
 					</ul>
 				</nav>
 
         </section>
 
-        <h2 style="text-align: center; margin-top: 2vw">See your results for <span style="color:indianred">{{ ingredients }} </span>:</h2>
+    
 
-<!-- <h2 style="text-align: left"> <a href="/" style="text-decoration: none; color:gray"> Recipes for you: </a></h2> -->
-<div style="margin-left:25%; margin-top: 5vw;">
+    
+<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/favorite.js"></script>
+
+
+
+
+
+<h2 style="text-align: left"> <a href="/" style="text-decoration: none; color:gray"> Recipes for you: </a></h2>
+<div style="margin-left:25%;">
     <ul class="list-unstyled">
         {% for recipe in recipes %}
             <li class="media">
@@ -70,9 +85,12 @@
                         <a href="/" style="text-decoration: none; color:gray">How many minutes for preparation? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['preparationMinutes'],0['original']}}</a> <br>
                         <a href="/" style="text-decoration: none; color:gray">How many minutes for cooking?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['cookingMinutes']}} </a> <br>
                         <a href="/" style="text-decoration: none; color:gray">How many likes has this recipe? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['aggregateLikes']}} </a> <br>
+                        <form method="post" action="/">
+                            <input type="submit" value="Add to Favorites" name="action1"/>
+                        </form>
                     {% else %}
                         {% for ingredient in recipe['usedIngredients'] %}
-                            Recipe calls for: {{ingredient['original']}} <br>
+                            <a href="/" style="text-decoration: none; color:gray">Recipe calls for:</a> {{ingredient['original']}} <br>
                         {% endfor %}
                         <a href="/" style="text-decoration: none; color:gray">How many your ingredients? </a><a href="/" style="text-decoration: none; color:indianred">{{recipe['usedIngredientCount']}} </a><br>
                         <a href="/" style="text-decoration: none; color:gray">How many missed ingredients?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['missedIngredientCount']}} </a> <br>
@@ -80,6 +98,10 @@
                             <a href="/" style="text-decoration: none; color:gray">Missed ingredients:</a> {{ingredient['original']}} <br>
                         {% endfor %}
                         <a href="/" style="text-decoration: none; color:gray">How many likes has this recipe?</a> <a href="/" style="text-decoration: none; color:indianred">{{recipe['likes']}} </a> <br>
+                        <form method="post" action="/favorites">
+                            <input type="submit" value="Add to Favorites" href="/favorites" name="action1"/>
+                        </form>
+                        <!--a href="javascript:addfav()">Add To Favorites</a!-->
                     {% endif %}
                 </div>
             </li> <br>
@@ -87,10 +109,28 @@
     </ul>
 </div >
 
+<!-- Main -->
+        <div id="main" class="wrapper style2">
+            <div class="title">End of the Results</div>
+            <div class="container">
 
-<div id="main" class="wrapper style2">
-    <div class="title" style="top: 2vw">End of the Results</div>
-</div>
+                <!-- Content -->
+                    <div id="content">
+                        <article class="box post">
+                            <header class="style1">
+                                <h2>Enjoy your meal and have a nice day<br class="mobile-hide" />
+                                </h2>
+                                <p>Like our recipe? Share it with your friends!</p>
+                            </header>
+                            <!--a href="#" class="image featured">
+                                <img src="images/pic01.jpg" alt="" />
+                            </a!-->
+                            
+                        </article>
+                    </div>
+
+            </div>
+        </div>
 
  
 
@@ -158,35 +198,4 @@
 </div>
 
 {% endblock %}
-
-
-<div id="main" class="wrapper style2">
-    <div class="title">End of the Results</div>
-    <div class="container">
-
-        <!-- Content -->
-            <!-- <div id="content">
-                <article class="box post">
-                    <header class="style1">
-                        <h2>Enjoy your meal and have a nice day<br class="mobile-hide" />
-                        </h2>
-                        <p>Like our recipe? Share it with your friends!</p>
-                    </header>
-                    
-                </article>
-            </div> -->
-
-    </div>
-</div>
-
-
-<!-- Scripts -->
-<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/jquery.dropotron.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/util.js')}}"></script>
-<script src="{{url_for('static', filename='js/main.js')}}"></script>
-
-
 </body>
