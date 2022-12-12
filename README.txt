@@ -10,3 +10,6 @@ To get the skeleton running, open a terminal and do the following:
 	7. open your browser, and open the local website 'localhost:5000'
 
 	To enable debugger: "export FLASK_APP=app.py" "export FLASK_DEBUG=1" before running flask
+
+If port 5000 is occupied by another program, type "lsof -i tcp:5000" to check what ports there are, and then
+"kill PID" to free the program.

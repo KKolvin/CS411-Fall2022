@@ -1,6 +1,5 @@
 User story 4: Personalized Record: Allergy
 
-As a login user, before inputting ingredients, I want the app to record things that may cause allergies. 
+As a login user, I want to record things that may cause allergies in my profile. 
 If I don’t have a particular allergy, I can skip this part. 
 If I remember I have an allergy to some ingredients later, I hope that I can update my allergy list later. 
-Thus, everytime time I look at a recipe that contains ingredients I'm allergic to, there will be a warning showing up for me. 

@@ -30,26 +30,16 @@
 						<nav id="nav">
 							<ul>
 								<li class="current"><a href="/">Home</a></li>
-								<li><a href="left.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="recipes?ingridients=">Recipes</a></li>
+								<li><a href="sign_in_up.html">Login</a></li>
+								<!-- <li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="unauth.html">No Sidebar</a></li> -->
 								<li>
-									<a href="#">Dropdown</a>
+									<a href="profile.html">Account</a>
 									<ul>
-										<li><a href="#">Lorem ipsum</a></li>
-										<li><a href="#">Magna veroeros</a></li>
-										<li><a href="#">Etiam nisl</a></li>
-										<li>
-											<a href="#">Sed consequat</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Amet consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Sed feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Nisl tempus</a></li>
+										<li><a href="sign_in_up.html">Log in</a></li>
+										<li><a href="profile.html">Profile</a></li>
+										<li><a href="{{url_for('logout')}}">Logout</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -73,70 +63,50 @@
 						  <div class="carousel-inner row w-100 mx-auto">
 							<div class="carousel-item col-md-4 active">
 							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/1/800/600" alt="Card image cap">
+								<img class="card-img-top img-fluid" src="../static/images/pic12.webp" alt="Food">
 								<div class="card-body">
 								  <h4 class="card-title">Card 1</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text" style="color: black;">Bone Marrow Al Forno with garlic, sea salt and parsley. Photo provided by Sandy Driscoll.</p>
 								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 								</div>
 							  </div>
 							</div>
 							<div class="carousel-item col-md-4">
 							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/2/800/600" alt="Card image cap">
+								<img class="card-img-top img-fluid" src="../static/images/pic16.png" alt="Smoothie">
 								<div class="card-body">
 								  <h4 class="card-title">Card 2</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text" style="color: black;">Glass of hot drink with anise. Photo provided by Charlotte May.</p>
 								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 								</div>
 							  </div>
 							</div>
 							<div class="carousel-item col-md-4">
 							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/3/800/600" alt="Card image cap">
+								<img class="card-img-top img-fluid" src="../static/images/pic14.png" alt="Card image cap">
 								<div class="card-body">
 								  <h4 class="card-title">Card 3</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text" style="color: black;">Chocolate pie with cream and raspberry. Photo provided by Unknown User.</p>
 								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 								</div>
 							  </div>
 							</div>
 							<div class="carousel-item col-md-4">
 							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/4/800/600" alt="Card image cap">
+								<img class="card-img-top img-fluid" src="../static/images/pic15.png" alt="Card image cap">
 								<div class="card-body">
 								  <h4 class="card-title">Card 4</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text" style="color: black;">Drizzled chicken wings cooked with thyme. Photo provided by Harry Dona.</p>
 								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 								</div>
 							  </div>
 							</div>
 							<div class="carousel-item col-md-4">
 							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/5/800/600" alt="Card image cap">
+								<img class="card-img-top img-fluid" src="../static/images/pic13.jpeg" alt="Card image cap">
 								<div class="card-body">
 								  <h4 class="card-title">Card 5</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-								</div>
-							  </div>
-							</div>
-							<div class="carousel-item col-md-4">
-							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/6/800/600" alt="Card image cap">
-								<div class="card-body">
-								  <h4 class="card-title">Card 6</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-								</div>
-							  </div>
-							</div>
-							<div class="carousel-item col-md-4">
-							  <div class="card">
-								<img class="card-img-top img-fluid" src="https://picsum.photos/seed/7/800/600" alt="Card image cap">
-								<div class="card-body">
-								  <h4 class="card-title">Card 7</h4>
-								  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								  <p class="card-text" style="color: black;">Berry smoothie with mint, blueberry and raspberry. Photo provided by fabrikasimf.</p>
 								  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 								</div>
 							  </div>
