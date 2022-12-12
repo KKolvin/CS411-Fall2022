@@ -18,83 +18,18 @@ import requests, json, unicodedata
 #for image uploading
 import os, base64
 
-mysql = MySQL()
+# mysql = MySQL()
 app = Flask(__name__)
-app.secret_key = "07f5ddb891msh21c512d703b7bd5p1cb69cjsnc2ae67f8953b"  # Change this!
+# app.secret_key = 'hidden'  # Change this!
 
+# #These will need to be changed according to your creditionals
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = '0125'
+# app.config['MYSQL_DATABASE_DB'] = 'convenient_recipes'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+# mysql.init_app(app)
 
-#new login
-import json
-from os import environ as env
-from urllib.parse import quote_plus, urlencode
-
-from authlib.integrations.flask_client import OAuth
-from dotenv import find_dotenv, load_dotenv
-from flask import Flask, redirect, render_template, session, url_for
-
-ENV_FILE = find_dotenv()
-if ENV_FILE:
-    load_dotenv(ENV_FILE)
-
-app = Flask(__name__)
-app.secret_key = env.get("APP_SECRET_KEY")
-
-
-oauth = OAuth(app)
-
-oauth.register(
-    "auth0",
-    client_id=env.get("AUTH0_CLIENT_ID"),
-    client_secret=env.get("AUTH0_CLIENT_SECRET"),
-    client_kwargs={
-        "scope": "openid profile email",
-    },
-    server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration',
-)
-
-
-# Controllers API
-@app.route("/")
-def home():
-    return render_template(
-        "home.html",
-        session=session.get("user"),
-        pretty=json.dumps(session.get("user"), indent=4),
-    )
-
-
-@app.route("/callback", methods=["GET", "POST"])
-def callback():
-    token = oauth.auth0.authorize_access_token()
-    session["user"] = token
-    return redirect("/")
-
-
-@app.route("/login")
-def login():
-    return oauth.auth0.authorize_redirect(
-        redirect_uri=url_for("callback", _external=True)
-    )
-
-
-@app.route("/logout")
-def logout():
-    session.clear()
-    return redirect(
-        "https://"
-        + env.get("AUTH0_DOMAIN")
-        + "/v2/logout?"
-        + urlencode(
-            {
-                "returnTo": url_for("home", _external=True),
-                "client_id": env.get("AUTH0_CLIENT_ID"),
-            },
-            quote_via=quote_plus,
-        )
-    )
-
-#end login
-#begin code used for login
+# #begin code used for login
 # login_manager = flask_login.LoginManager()
 # login_manager.init_app(app)
 
@@ -211,19 +146,19 @@ def logout():
 # 	cursor.execute("SELECT imgdata, picture_id, caption FROM Pictures WHERE user_id = '{0}'".format(uid))
 # 	return cursor.fetchall() #NOTE return a list of tuples, [(imgdata, pid, caption), ...]
 
-# def getUserIdFromEmail(email):
-# 	cursor = conn.cursor()
-# 	cursor.execute("SELECT user_id  FROM Users WHERE email = '{0}'".format(email))
-# 	return cursor.fetchone()[0]
+def getUserIdFromEmail(email):
+	cursor = conn.cursor()
+	cursor.execute("SELECT user_id  FROM Users WHERE email = '{0}'".format(email))
+	return cursor.fetchone()[0]
 
-# def isEmailUnique(email):
-# 	#use this to check if a email has already been registered
-# 	cursor = conn.cursor()
-# 	if cursor.execute("SELECT email  FROM Users WHERE email = '{0}'".format(email)):
-# 		#this means there are greater than zero entries with that email
-# 		return False
-# 	else:
-# 		return True
+def isEmailUnique(email):
+	#use this to check if a email has already been registered
+	cursor = conn.cursor()
+	if cursor.execute("SELECT email  FROM Users WHERE email = '{0}'".format(email)):
+		#this means there are greater than zero entries with that email
+		return False
+	else:
+		return True
 #end login code
 
 @app.route('/profile')
@@ -256,13 +191,19 @@ def upload_file():
 
 
 
+# def favourite_post(request, fav_id):
+#     video = get_object_or_404(Video, id=fav_id)
+#     if request.method == 'POST': #Then add this video to users' favourite
+#         video.
+
+#    return render(request, 'foobar/%s' % fav_id)
 
 
 
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/"
 
 headers = {
-	"X-RapidAPI-Key": "07f5ddb891msh21c512d703b7bd5p1cb69cjsnc2ae67f8953b",
+	"X-RapidAPI-Key": "hidden",
 	"X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
@@ -284,6 +225,10 @@ def get_recipes():
 		print(response)
 		return render_template('recipes.html', recipes=response['recipes'])
 
+# @app.route('/favorites')
+# def get_favorites():
+# 	return render_template('left.html')
+
 
 
 
@@ -292,10 +237,11 @@ def get_recipes():
 def hello():
 	return render_template('home.html')
 
-@app.route("/left.html", methods=['GET'])
-# @flask_login.login_required
+@app.route("/favorites", methods=['GET', 'POST'])
 def new_page_function():
-	return render_template('left.html')
+	if request.method == "POST":
+		rec = request.form.get("recipe")
+	return render_template('left.html', fav=rec)
 
 @app.route("/carousel.html", methods=['GET'])
 def carousel():
