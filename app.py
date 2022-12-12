@@ -20,7 +20,11 @@ import os, base64
 
 # mysql = MySQL()
 app = Flask(__name__)
+<<<<<<< HEAD
 # app.secret_key = 'hidden'  # Change this!
+=======
+app.secret_key = "hidden"  # Change this!
+>>>>>>> 621fdd147673aadaf7d60ba33a553785b20888ab
 
 # #These will need to be changed according to your creditionals
 # app.config['MYSQL_DATABASE_USER'] = 'root'
