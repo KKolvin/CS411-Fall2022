@@ -1,5 +1,6 @@
 User story 1: Account Management
 
   As a guest, I can register to become a new user by providing username, email, and password.
+  The system will ask me to enter the password again for confirmation which has to be the same as password. 
   After becoming a user, I would like to login by either email and password or third party authentication with Google.
   My accound is linked by the primary email address. Different people can have the same username.
