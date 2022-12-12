@@ -1,7 +1,5 @@
 User story 1: Account Management
 
-  As a user, I want to login by either email and password or third party authentication with Google, Facebook, Twitter, or Apple.
-  I will be asked to provide a primary email address to link to the account if I didn’t provide this information.
-  When I register, I will also provide my answer to a question that I select from the security questions being provided. 
-  After that, I can enable 2 step verification by either email or answering to my security question per login in the future. 
-  If I forget my password, I will be able to receive an email to retrieve my password.
+  As a guest, I can register to become a new user by providing username, email, and password.
+  After becoming a user, I would like to login by either email and password or third party authentication with Google.
+  My accound is linked by the primary email address. Different people can have the same username.
