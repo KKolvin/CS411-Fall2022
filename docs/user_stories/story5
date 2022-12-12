@@ -1,7 +1,5 @@
 User story 5: Save/Favorites
 
 As a login user, I would like to be able to save my favorite recipes where it is easily accessible.  
-To save my recipes, I would like an option to click a button on the same page as the recipe and have it added to my favorites that I can access later without having to search for it. 
-I would like to be able to click a tab (ex: “Favorites”, “Saved”) and have it show me my saved recipes. 
-I would like to be able to create different folders within my saved recipes so that I can categorize them (ex: “Breakfast”). 
-When I click on a recipe, I want it to take me to that recipe and I want to be able to click back to the folder easily.
+To save my recipes, I would like an option to click a button on the same page as the recipe and have it added to my favorites that I can access.
+I would like to be able to click a tab (ex: “Favorites”, “Saved”) and have it show me my saved recipes.
