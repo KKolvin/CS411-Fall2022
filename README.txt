@@ -1,3 +1,5 @@
+Project for CS411 - RECIPE BUILDER
+
 Frontend: html, css, js
 Backend: Python Flask, MySQL (database)
 
